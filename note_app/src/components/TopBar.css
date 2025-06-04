@@ -1,0 +1,33 @@
+.topbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: var(--noteease-white);
+  border-bottom: 1px solid var(--noteease-border-color);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  height: 60px; /* Fixed height for the top bar */
+  box-sizing: border-box;
+}
+
+.topbar-logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--noteease-primary);
+}
+
+.topbar-search {
+  flex-grow: 1;
+  margin: 0 20px;
+  max-width: 400px; /* Limit search bar width */
+}
+
+.topbar-search input {
+  padding: 8px 12px; /* Consistent padding */
+  font-size: 0.9rem;
+}
+
+.topbar-add-btn {
+  padding: 8px 15px; /* Slightly smaller button */
+  font-size: 0.9rem;
+}

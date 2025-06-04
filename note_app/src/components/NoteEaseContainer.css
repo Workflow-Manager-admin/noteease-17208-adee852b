@@ -1,0 +1,13 @@
+.noteease-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: var(--noteease-secondary);
+  color: var(--noteease-text-primary);
+}
+
+.noteease-main-content {
+  display: flex;
+  flex-grow: 1;
+  overflow: hidden; /* Prevents scrollbars on the main content area itself */
+}
