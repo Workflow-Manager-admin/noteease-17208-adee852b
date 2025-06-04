@@ -1,0 +1,108 @@
+.sidebar-container {
+  width: 300px;
+  min-width: 250px; /* Minimum width */
+  background-color: var(--noteease-white);
+  border-right: 1px solid var(--noteease-border-color);
+  overflow-y: auto;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar-empty {
+  text-align: center;
+  padding: 20px;
+  color: var(--noteease-text-secondary);
+}
+
+.sidebar-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-item {
+  padding: 12px 15px;
+  cursor: pointer;
+  border-bottom: 1px solid var(--noteease-border-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.sidebar-item:last-child {
+  border-bottom: none;
+}
+
+.sidebar-item:hover {
+  background-color: var(--noteease-secondary);
+}
+
+.sidebar-item.active {
+  background-color: var(--noteease-primary);
+  color: var(--noteease-white);
+}
+
+.sidebar-item.active .sidebar-item-title,
+.sidebar-item.active .sidebar-item-snippet,
+.sidebar-item.active .sidebar-item-category {
+  color: var(--noteease-white);
+}
+.sidebar-item.active .sidebar-item-delete {
+ color: var(--noteease-white);
+}
+
+
+.sidebar-item-content {
+  flex-grow: 1;
+  margin-right: 10px;
+  overflow: hidden; /* Ensure long text doesn't break layout */
+}
+
+.sidebar-item-title {
+  margin: 0 0 5px 0;
+  font-size: 1rem;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--noteease-text-primary);
+}
+
+.sidebar-item-snippet {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--noteease-text-secondary);
+  line-height: 1.3;
+  /* Multiple lines with ellipsis is tricky, keeping it simple */
+  white-space: nowrap; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sidebar-item-category {
+  font-size: 0.75rem;
+  color: var(--noteease-primary);
+  margin-top: 4px;
+  display: block;
+}
+
+
+.sidebar-item-delete {
+  font-size: 1rem; /* Adjust icon size */
+  color: var(--noteease-error);
+  opacity: 0.7;
+  flex-shrink: 0; /* Prevent button from shrinking */
+}
+
+.sidebar-item:hover .sidebar-item-delete {
+  opacity: 1;
+}
+
+.sidebar-item.active .sidebar-item-delete:hover {
+  color: var(--noteease-accent); /* Accent on hover when active */
+}
+
+.sidebar-item-delete:hover {
+   color: #A03020; /* Darker red on hover */
+}
