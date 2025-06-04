@@ -1,0 +1,126 @@
+.note-content-container {
+  flex-grow: 1;
+  padding: 20px;
+  background-color: var(--noteease-white);
+  overflow-y: auto; /* Allow scrolling for long notes */
+  display: flex;
+  flex-direction: column;
+}
+
+.note-content-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: var(--noteease-text-secondary);
+  height: 100%;
+}
+.note-content-empty h2 {
+  font-weight: 400;
+}
+
+.note-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  border-bottom: 1px solid var(--noteease-border-color);
+  padding-bottom: 10px;
+}
+
+.note-title-display {
+  margin: 0;
+  font-size: 1.8rem;
+  color: var(--noteease-text-primary);
+  word-break: break-word;
+}
+
+.note-actions button {
+  margin-left: 10px;
+}
+
+.note-category-display {
+  font-size: 0.9rem;
+  color: var(--noteease-text-secondary);
+  margin-bottom: 20px;
+}
+.note-category-display span {
+  font-weight: 500;
+  background-color: var(--noteease-secondary);
+  padding: 2px 6px;
+  border-radius: 3px;
+  color: var(--noteease-primary);
+}
+
+
+.note-body-display {
+  flex-grow: 1;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--noteease-text-primary);
+  white-space: pre-wrap; /* Preserve line breaks and spaces */
+  word-wrap: break-word; /* Ensure long words don't overflow */
+}
+.note-body-display p {
+    margin-top: 0;
+    margin-bottom: 1em;
+}
+.note-body-display p:last-child {
+    margin-bottom: 0;
+}
+
+.note-content-placeholder {
+  color: var(--noteease-text-secondary);
+  font-style: italic;
+}
+
+.note-last-modified {
+  margin-top: 20px;
+  font-size: 0.8rem;
+  color: var(--noteease-text-secondary);
+  text-align: right;
+}
+
+/* Editing Form Styles */
+.note-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px; /* Spacing between form groups */
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  font-weight: 500;
+  color: var(--noteease-text-secondary);
+}
+
+.note-edit-form input[type="text"],
+.note-edit-form textarea {
+  font-size: 1rem; /* Ensure consistent font size with display */
+}
+
+.note-edit-form textarea {
+  min-height: 200px; /* Ample space for content editing */
+  line-height: 1.6;
+}
+
+.note-edit-actions {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px; /* Spacing between action buttons */
+}
+
+.btn-secondary {
+  background-color: var(--noteease-secondary);
+  color: var(--noteease-text-primary);
+  border: 1px solid var(--noteease-border-color);
+}
+
+.btn-secondary:hover {
+  background-color: #E1E5E8; /* Slightly darker secondary */
+}
